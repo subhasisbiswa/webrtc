@@ -78,6 +78,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // exposing public directory to outside world
 app.use(express.static("public"));
+app.use(express.static(__dirname));
 
 // handle incoming http request
 app.get("/", (req, res) => {
